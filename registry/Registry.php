@@ -14,6 +14,7 @@
  */
 require_once "Conf.php";
 require_once "TreeBuilder.php";
+require_once "MockRegistry.php";
 
 class Registry
 {
