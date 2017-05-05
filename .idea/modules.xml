@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ee-patterns-php.iml" filepath="$PROJECT_DIR$/ee-patterns-php.iml" />
+      <module fileurl="file://$PROJECT_DIR$/front-controller/front-controller.iml" filepath="$PROJECT_DIR$/front-controller/front-controller.iml" />
       <module fileurl="file://$PROJECT_DIR$/registry/registry.iml" filepath="$PROJECT_DIR$/registry/registry.iml" />
     </modules>
   </component>
