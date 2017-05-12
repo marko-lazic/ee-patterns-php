@@ -24,6 +24,10 @@ class Registry
     private $treeBuilder = null;
     private $conf = null;
 
+    private $request;
+    private $applicationHelper;
+    private $commands;
+
     private static $testmode = false;
 
     private function __construct()
@@ -79,5 +83,44 @@ class Registry
         self::$testmode = $mode;
     }
 
+    public function setRequest(Request $request)
+    {
+        $this->request = $request;
+    }
+
+    public function getRequest(): Request
+    {
+        if (is_null($this->request)) {
+            throw new \Exception("No Request set");
+        }
+        return $this->request;
+    }
+
+    public function getApplicationHelper(): ApplicationHelper
+    {
+        if (is_null($this->applicationHelper)) {
+            $this->applicationHelper = new ApplicationHelper();
+        }
+    }
+
+    public function setCont(Conf $conf)
+    {
+        $this->conf = $conf;
+    }
+
+    public function getConf(): Conf
+    {
+        return $this->conf;
+    }
+
+    public function setCommands(Conf $commands)
+    {
+        $this->commands = $commands;
+    }
+
+    public function getCommands(): Conf
+    {
+        return $this->commands;
+    }
 }
 

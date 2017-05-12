@@ -31,7 +31,7 @@ class Controller
 
     private function handleRequest()
     {
-        $request = $reg->getRequest();
+        $request = $this->reg->getRequest();
         $resolver = new CommandResolver();
         $cmd = $resolver->getCommand($request);
         $cmd->execute($request);
